@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="GSB.Antibiotiques"
+             Title="Antibiotiques"
+             Appearing="ContentPage_Appearing"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Antibiotiques de cette catégorie : " FontSize="Medium" x:Name="txtCategorie"></Label>
+            <ListView x:Name="lvAntibiotiques" ItemTapped="lvAntibiotiques_ItemTapped"></ListView>
+            
+            <StackLayout IsVisible="False" x:Name="stackPoids">
+                <Label Text="Veuillez saisir le poids du patient"></Label>
+                <Entry x:Name="inpPoids" Keyboard="Numeric"></Entry>
+            </StackLayout>
+            <Button Text="Rechercher" x:Name="Button" Clicked="Button_Clicked" IsVisible="False"></Button>
+            <Label x:Name="txtResult" FontSize="Medium" BackgroundColor="CadetBlue" HorizontalTextAlignment="Center" TextColor="White"></Label>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
